@@ -4,8 +4,8 @@
 # FILL THESE COMMENTS IN
 #*****************************************
 # YOUR NAME: Gillian Wahleithner
-# NUMBER OF HOURS TO COMPLETE:  2
-# YOUR COLLABORATION STATEMENT(s) (refer to syllabus):
+# NUMBER OF HOURS TO COMPLETE:  3
+# YOUR COLLABORATION STATEMENT(s) (refer to syllabus): I received assistance from Jennifer Cross on this assignment.
 #
 #*****************************************
 
@@ -57,58 +57,8 @@ def heronsformula(a, b, c):
     area = math.sqrt(s * (s - a) * (s - b) * (s - c)) #replace this with your calculation for area
     return area
 
+
 def areaofatriangle(m1, b1, m2, b2, m3, b3):
-    #Using the three functions above, now calculate the area of a
-    #triangle when the three sides are described by three linear equations
-    #y = (m1 * x) + b1;  y = (m2 * x) + b2; and y = (m3 * x) + b3
-
-    #Intersections of lines
-
-    #line 1
-    x1 = (b2 - b1) / (m1 - m2)
-
-    y1 = ((m2 * b1) - (m1 * b2)) / (m2 - m1)
-
-    #line 2
-    x2 = (b3 - b1) / (m1 - m3)
-
-    y2 = ((m3 * b1) - (m1 * b3)) / (m3 - m1)
-
-    #line 3
-    x3 = (b2 - b3) / (m3 - m2)
-
-    y3 = ((m2 * b3) - (m3 * b2)) / (m2 - m3)
-
-    #side 1
-
-    a = math.sqrt(((x2 - x1) ** 2) + ((y2 - y1) ** 2))
-
-    #side 2
-
-    b = math.sqrt(((x2 - x3) ** 2) + ((y2 - y3) ** 2))
-
-    #side 3
-
-    c = math.sqrt(((x1 - x3) ** 2) + ((y1 - y3) ** 2))
-
-    #Heron's formula
-
-    s = (a + b + c) / 2
-
-    area = math.sqrt(s * (s - a) * (s - b) * (s - c)) #replace this with your calculation for area
-    return area
-
-    if (x1 == x2) & (x2 == x3) & (y1 == y2) & (y2 == y3):
-        print("No triangle")
-    else:
-        pass
-
-    if (m1 == m2) & (m2 == m3):
-        print("No intersection")
-    else:
-        pass
-
-def areaofatriangle2(m1, b1, m2, b2, m3, b3):
     #Using the three functions above, now calculate the area of a
     #triangle when the three sides are described by three linear equations
     #y = (m1 * x) + b1;  y = (m2 * x) + b2; and y = (m3 * x) + b3
@@ -158,8 +108,6 @@ def areaofatriangle2(m1, b1, m2, b2, m3, b3):
 
     area = heronsformula(distance1, distance2, distance3)
 
-
-
     return area
 
 
@@ -193,10 +141,4 @@ print("Area of a Triangle:")
 print(round(areaofatriangle(10, 10, 20, 0, 30, 0),2) == 2.5)
 print(round(areaofatriangle(0, 0, 1, 0, -1, 10),2) == 25)
 print("*********")
-
-print("Area of a Triangle2:")
-#If these are both true, it is likely that your function is working.
-print(round(areaofatriangle2(10, 10, 20, 0, 30, 0),2) == 2.5)
-print(round(areaofatriangle2(0, 0, 1, 0, -1, 10),2) == 25)
-print("*********")
-print(areaofatriangle2(10, 0, 10, 0, -1, 10) == 25)
+print(areaofatriangle(10, 0, 10, 0, -1, 10) == 25)
