@@ -63,6 +63,7 @@ def areaofatriangle(m1, b1, m2, b2, m3, b3):
     #triangle when the three sides are described by three linear equations
     #y = (m1 * x) + b1;  y = (m2 * x) + b2; and y = (m3 * x) + b3
 
+    #if two or more of the lines are parallel, if statement prints "no intersection"
     if ((m1 == m2) or (m2 == m3)) or (m1 == m3):
         print("No intersection")
         return None
@@ -86,6 +87,7 @@ def areaofatriangle(m1, b1, m2, b2, m3, b3):
 
     y3 = intersectionoftwolines_y(m2, b2, m3, b3)
 
+    #if the lines have any points of intersection, if statement prints "No triangle"
     if (x1 == x2) & (x2 == x3) & (y1 == y2) & (y2 == y3):
         print("No triangle")
         return None
@@ -141,4 +143,6 @@ print("Area of a Triangle:")
 print(round(areaofatriangle(10, 10, 20, 0, 30, 0),2) == 2.5)
 print(round(areaofatriangle(0, 0, 1, 0, -1, 10),2) == 25)
 print("*********")
+
+#code to test if statement
 print(areaofatriangle(10, 0, 10, 0, -1, 10) == 25)
